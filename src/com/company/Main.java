@@ -4,18 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         //creates new object of the Animal class
-        Animal dog = new Animal();
-        //adds attributes for dog object
-        dog.species = "dog";
-        dog.name = "fafik";
-        dog.weight = 5.0;
+        Animal dog = new Animal("dog", 2.0, "fafik");
 
         //creates new object of the Phone class
-        Phone teflon = new Phone();
+        Phone teflon = new Phone("teflon incorporated", "10", 5.6);
         //adds attributes for teflon object
-        teflon.screenSize = 5.6;
-        teflon.producer = "teflon incorporated";
-        teflon.model = "10";
         teflon.operatingSystem = "teflOS";
 
         //use the feed method from the object called dog
