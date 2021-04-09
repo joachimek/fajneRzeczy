@@ -3,12 +3,12 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Human Joachim = new Human("Joachim", "Kaczmarczyk", "123456789");
+        Human Joachim = new Human("Joachim", "Kaczmarczyk", "123456789", 5000.00);
         Animal dog = new Animal("dog");
-        dog.feed();
-        dog.takeForAWalk();
+        //dog.feed();
+        //dog.takeForAWalk();
 
-        Joachim.auto = new Car("silver", "Golf 2", "Volkswagen");
-
+        Joachim.getSalary();
+        Joachim.setSalary(6000.00);
     }
 }

@@ -1,8 +1,13 @@
 package com.company;
 
+import java.io.File;
+
 public class Animal {
     final private String species;
+    public String name;
     private Double weight;
+    public File pic;
+
     private final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
     private final Double DEFAULT_DOG_WEIGHT = 7.0;
     private final Double DEFAULT_CAT_WEIGHT = 3.0;
@@ -24,6 +29,14 @@ public class Animal {
                 weight = DEFAULT_ANIMAL_WEIGHT;
                 break;
         }
+    }
+
+    public Double getWeight(){
+        return this.weight;
+    }
+
+    public void setWeight(Double weight){
+        this.weight = weight;
     }
 
     void takeForAWalk() {
