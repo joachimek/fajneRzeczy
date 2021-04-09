@@ -5,7 +5,7 @@ public class Human {
     public String firstName;
     public String lastName;
     protected String phone;
-    public Car auto;
+    private Car auto;
     private Double salary;
 
     public Human(String firstName, String lastName, String phone, Double salary) {
@@ -28,6 +28,22 @@ public class Human {
             System.out.println("tylko nie kręć mordo bo zus już wszystko wie");
             this.salary = salary;
         }
+    }
+
+    public Car getAuto(){
+        return this.auto;
+    }
+
+    public void setAuto(Car auto){
+        if(auto.price < salary){
+            System.out.println("kupiony za gotówkę");
+            this.auto = auto;
+        }
+        else if((auto.price)/12 < salary){
+            System.out.println("kupiony na kredyt");
+            this.auto = auto;
+        }
+        else System.out.println("jak można być biednym po prostu przestań");
     }
 
     void write() {
