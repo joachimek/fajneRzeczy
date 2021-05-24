@@ -1,17 +1,21 @@
 package com.company;
-import java.time.LocalDateTime;
+import Creatures.Pet;
+import devices.Car;
+import devices.Phone;
 
 public class Human {
     public String firstName;
     public String lastName;
-    protected String phone;
-    private Car auto;
+    public Phone phone;
+    public Car auto;
     private Double salary;
+    public Pet pet;
 
-    public Human(String firstName, String lastName, String phone, Double salary) {
+    public Double cash;
+
+    public Human(String firstName, String lastName, Double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.phone = phone;
         this.salary = salary;
     }
 
@@ -48,5 +52,12 @@ public class Human {
 
     void write() {
         System.out.println("Hi " + firstName);
+    }
+
+    public String toString() {
+        return "Human:" +
+                "\n\tsalary=" + salary +
+                "\n\tfirstName=" + firstName +
+                "\n\tlastName=" + lastName;
     }
 }
